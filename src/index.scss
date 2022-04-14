@@ -9,3 +9,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+//change link style
+a {
+  text-decoration: none;
+  color: black;
+  
+}
+
+//apply box sizing change to all
+* {
+  box-sizing: border-box;
+}
