@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
@@ -22,35 +21,32 @@ const SignInForm = () => {
   //destructure and set as constants
   const { email, password } = formFields;
 
-  console.log(formFields);
-
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      console.log(response);
+      
       resetFormFields();
     } catch (error) {
       switch (error.code) {
         case "auth/wrong-password":
-          alert('incorrect password for email');
+          alert("incorrect password for email");
           break;
-        
+
         case "auth/user-not-found":
-          alert("no user associated with this email")
+          alert("no user associated with this email");
           break;
 
         default:

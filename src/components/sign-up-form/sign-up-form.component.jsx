@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { useState } from "react";
 
 import FormInput from "../form-input/form-input.component";
@@ -23,7 +22,7 @@ const SignUpForm = () => {
   //destructure and set as constants
   const { displayName, email, password, confirmPassword } = formFields;
 
-  console.log(formFields);
+  //console.log('hit')
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
