@@ -10,6 +10,9 @@
   top: 90px;
   right: 40px;
   z-index: 5;
+  //scrollbar styling firefox
+  scrollbar-color: grey transparent;
+  
 
   .empty-message {
     font-size: 18px;
@@ -20,7 +23,10 @@
     height: 240px;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    //custom scroll setup
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
   }
 
   button {
