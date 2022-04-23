@@ -12,7 +12,7 @@ const App = () => {
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />{" "}
         {/*index: this subroute is the default subroute of the parent*/}
-        <Route path="shop" element={<Shop />} />
+        <Route path="shop/*" element={<Shop />} />
         <Route path="auth" element={<SignIn />} />
         <Route path="checkout" element={<Checkout />} />
       </Route>
