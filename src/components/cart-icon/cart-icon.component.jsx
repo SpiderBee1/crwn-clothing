@@ -1,4 +1,4 @@
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
 import {CartIconContainer, ShoppingIcon, ItemCount} from "./cart-icon.styles.jsx";
 

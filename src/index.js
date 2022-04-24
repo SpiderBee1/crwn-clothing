@@ -17,6 +17,7 @@ ReactDOM.render(
         <CategoriesProvider>
           <CartProvider>
             <App />
+            {console.log("index happened")}
           </CartProvider>
         </CategoriesProvider>
       </UserProvider>
