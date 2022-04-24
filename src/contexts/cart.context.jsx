@@ -2,7 +2,7 @@ import {
   createContext,
   useEffect,
   useState,
-} from "react/cjs/react.development";
+} from "react";
 
 const addCartItem = (cartItems, productToAdd) => {
   //find if cartItems contains productToAdd
