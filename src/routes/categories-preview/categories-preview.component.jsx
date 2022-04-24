@@ -15,17 +15,6 @@ const CategoriesPreview = () => {
         return (
           <CategoryPreview key={title} title={title} products={products} />
         );
-
-        {
-          /* <Fragment key={title}>
-          <h2>{title}</h2>
-          <div className="products-container">
-            {categoriesMap[title].map((product) => (
-              <ProductCard key={product.id} product={product} />
-            })}
-          </div>
-        </Fragment> */
-        }
       })}
     </Fragment>
   );
