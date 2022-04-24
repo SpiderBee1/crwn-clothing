@@ -2,7 +2,7 @@ import {
   createContext,
   useState,
   useEffect,
-} from "react/cjs/react.development";
+} from "react";
 
 import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils.js";
 
