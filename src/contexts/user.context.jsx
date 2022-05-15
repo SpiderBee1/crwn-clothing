@@ -2,10 +2,11 @@ import { createContext, useEffect, useReducer } from "react";
 
 import { createAction } from "../utils/reducer/reducer.utils";
 
+import { USER_ACTION_TYPES } from "../store/user/user.types";
+
 import {
   createUserDocumentFromAuth,
   onAuthStateChangedListener,
-  signOutUser,
 } from "../utils/firebase/firebase.utils";
 
 //the actual value you want to access
@@ -17,8 +18,8 @@ export const UserContext = createContext({
 //using reducers
 //===========================
 
-export const USER_ACTION_TYPES = {
-  SET_CURRENT_USER: "SET_CURRENT_USER",
+const INITIAL_STATE = {
+  currentUser: null,
 };
 
 const userReducer = (state, action) => {
@@ -30,14 +31,9 @@ const userReducer = (state, action) => {
         ...state,
         currentUser: payload,
       };
-      break;
     default:
       throw new Error(`unhandled type ${type} in userReducer`);
   }
-};
-
-const INITIAL_STATE = {
-  currentUser: null,
 };
 
 //=====================
